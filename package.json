@@ -1,0 +1,21 @@
+{
+  "name": "alexa_test",
+  "version": "1.0.0",
+  "description": "Test the alexa service and collect data.",
+  "main": "output/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -r ./output",
+    "build": "tsc",
+    "start": "npm run build && node output/index.js trustpilot.com"
+  },
+  "author": "Stefan Sonntag",
+  "license": "ISC",
+  "dependencies": {
+    "awis": "^1.0.10",
+    "util": "^0.12.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
