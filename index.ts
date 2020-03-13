@@ -1,8 +1,11 @@
 import * as awis from 'awis';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 const client = awis({
-  key: 'secret',
-  secret: 'secret',
+  key: process.env['AWIS_KEY'] || '',
+  secret: process.env['AWIS_SECRET'] || '',
 });
 
 const Requests = {

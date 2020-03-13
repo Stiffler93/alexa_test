@@ -13,9 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "awis": "^1.0.10",
+    "dotenv": "^8.2.0",
     "util": "^0.12.2"
   },
   "devDependencies": {
+    "@types/node": "^13.9.1",
     "typescript": "^3.8.3"
   }
 }
