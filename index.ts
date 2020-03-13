@@ -8,40 +8,47 @@ const client = awis({
   secret: process.env['AWIS_SECRET'] || '',
 });
 
-const Requests = {
+interface Request {
+  ResponseGroup: string[];
+}
+
+interface Requests {
+  [keyof: string]: Request;
+}
+
+const Requests: Requests = {
   'UrlInfo': {
-    'ResponseGroup': [
-    'Rank',
-    'RankByCountry',
-    'UsageStats',
-    'AdultContent',
-    'Speed',
-    'Language',
-    'LinksInCount',
-    'SiteData',
-    'Categories'
-  ]},
+    ResponseGroup: [
+      'Rank',
+      'RankByCountry',
+      'UsageStats',
+      'AdultContent',
+      'Speed',
+      'Language',
+      'LinksInCount',
+      'SiteData',
+      'Categories'
+    ]
+  },
   'TrafficHistory': {
-    'ResponseGroup': [
+    ResponseGroup: [
       'History'
     ]
   },
   'SitesLinkingIn': {
-    'ResponseGroup': [
+    ResponseGroup: [
       'SitesLinkingIn'
     ]
   }
 }
 
 
-
-
-export function lookup(domain: string) {
+export function lookup(domain: string, action: string, responseGroup: string) {
   return new Promise((resolve, reject) => {
     client({
-      Action: 'UrlInfo',
+      Action: action,
       'Url': domain,
-      'ResponseGroup': 'Categories',
+      'ResponseGroup': responseGroup,
     }, (err: any, data: any) => {
       if (err) {
         return reject(err)
@@ -51,15 +58,15 @@ export function lookup(domain: string) {
   })
 }
 
-// lookup('trustpilot.com').then(data =>
-//   {console.log(JSON.stringify(data, null, 2));}, 
-//   err => {console.log(JSON.stringify(err));});
+const DOMAIN = 'trustpilot.com';
 
-Object.entries(Requests).map(
-  ([key, data]: [string, any], index: number) => 
+const promises = Object.entries(Requests).map(
+  ([key, data]: [string, Request], index: number) => 
     {
-      // const {key, data} = object;
-      console.log({'key': key, 'data': data, 'index': index});
+      // console.log({'key': key, 'data': data, 'index': index});
+      const responseGroups = data.ResponseGroup.join(',');
+      console.log(responseGroups);
+      return lookup(DOMAIN, key, responseGroups);
     });
 
-console.log(Object.entries(Requests));
+Promise.all(promises).then(data => console.log(data));
