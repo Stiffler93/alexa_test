@@ -1,0 +1,156 @@
+[
+  {
+    "contentData": {
+      "dataUrl": "trustpilot.com",
+      "siteData": {
+        "title": "Trustpilot",
+        "description": "Trustpilot is an open, review-driven community connecting online consumers like you, with the companies that you buy from. Make smarter, informed decisions about purchasing by sharing your reviews today"
+      },
+      "speed": {
+        "medianLoadTime": "1506",
+        "percentile": "58"
+      },
+      "adultContent": "",
+      "language": "",
+      "linksInCount": "71131"
+    },
+    "related": {
+      "dataUrl": "trustpilot.com",
+      "categories": {
+        "categoryData": {
+          "title": "Consumer Information/Consumer Opinion",
+          "absolutePath": "Top/Home/Consumer_Information/Consumer_Opinion"
+        }
+      }
+    },
+    "trafficData": {
+      "dataUrl": "trustpilot.com",
+      "rank": "2223",
+      "rankByCountry": {
+        "country": [
+          {
+            "code": "EG",
+            "rank": "5398",
+            "contribution": {
+              "pageViews": "",
+              "users": ""
+            }
+          }
+        ]
+      },
+      "usageStatistics": {
+        "usageStatistic": [
+          {
+            "timeRange": {
+              "months": "3"
+            }
+          },
+          {
+            "timeRange": {
+              "months": "1"
+            }
+          },
+          {
+            "timeRange": {
+              "days": "7"
+            }
+          },
+          {
+            "timeRange": {
+              "days": "1"
+            },
+            "rank": {
+              "value": "3308",
+              "delta": "-221"
+            },
+            "reach": {
+              "rank": {
+                "value": "3916",
+                "delta": "+147"
+              },
+              "perMillion": {
+                "value": "170",
+                "delta": "-2.01%"
+              }
+            },
+            "pageViews": {
+              "perMillion": {
+                "value": "22",
+                "delta": "+40%"
+              },
+              "rank": {
+                "value": "2811",
+                "delta": "-1291"
+              },
+              "perUser": {
+                "value": "5.0",
+                "delta": "+40%"
+              }
+            }
+          }
+        ]
+      },
+      "contributingSubdomains": {
+        "contributingSubdomain": [
+          {
+            "dataUrl": "trustpilot.com",
+            "timeRange": {
+              "months": "1"
+            },
+            "reach": {
+              "percentage": "30.43%"
+            },
+            "pageViews": {
+              "percentage": "30.15%",
+              "perUser": "1.83"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "trafficHistory": {
+      "range": "31",
+      "site": "trustpilot.com",
+      "start": "2020-02-12",
+      "historicalData": {
+        "data": [
+          {
+            "date": "2020-02-12",
+            "pageViews": {
+              "perMillion": "14",
+              "perUser": "4.20"
+            },
+            "rank": "343",
+            "reach": {
+              "perMillion": "130"
+            }
+          },
+          {
+            "date": "2020-03-13",
+            "pageViews": {
+              "perMillion": "22",
+              "perUser": "5.00"
+            },
+            "rank": "3308",
+            "reach": {
+              "perMillion": "170"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "sitesLinkingIn": {
+      "site": [
+        {
+          "title": "google.com",
+          "url": "google.com"
+        }
+      ]
+    }
+  }
+]
+

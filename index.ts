@@ -1,6 +1,13 @@
 import * as awis from 'awis';
 import * as dotenv from 'dotenv';
 
+const urls = process.argv.slice(2);
+
+if (!urls || urls.length == 0) {
+  console.log('No URL\'s specified. Terminate script.');
+  process.exit(0);
+}
+
 dotenv.config();
 
 const client = awis({
@@ -40,8 +47,7 @@ const Requests: Requests = {
       'SitesLinkingIn'
     ]
   }
-}
-
+};
 
 export function lookup(domain: string, action: string, responseGroup: string) {
   return new Promise((resolve, reject) => {
@@ -53,20 +59,22 @@ export function lookup(domain: string, action: string, responseGroup: string) {
       if (err) {
         return reject(err)
       }
+
+      console.log('Resolve action: ' + action);
       return resolve(data)
     })
   })
 }
 
-const DOMAIN = 'trustpilot.com';
-
-const promises = Object.entries(Requests).map(
-  ([key, data]: [string, Request], index: number) => 
+const promises = urls.map((url: string) => new Promise((resolve, reject) => {
+    const sub_promises = Object.entries(Requests).map(
+  ([key, data]: [string, Request]) =>
     {
-      // console.log({'key': key, 'data': data, 'index': index});
       const responseGroups = data.ResponseGroup.join(',');
-      console.log(responseGroups);
-      return lookup(DOMAIN, key, responseGroups);
+      return lookup(url, key, responseGroups);
     });
+    resolve(Promise.all(sub_promises));
+}
+    ));
 
-Promise.all(promises).then(data => console.log(data));
+Promise.all(promises).then(data => console.log(JSON.stringify(data, null, 2)));

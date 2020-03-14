@@ -1,0 +1,26 @@
+What data is used in Salesforce from Alexa API?
+- data is retrieved through the businessunitenrichment-api project (= internal API)
+- the businessunitenrichment-api provides following information to URL's: Categories, RankByCountry, TrafficData (=Rank and UsageStats), SiteData
+    ~ Example Payload can be found in businessunitenrichment-api_payload.json
+- In Salesforce only the global and local ranks are used to enrich Leads and Domains
+
+
+What data can we get from Alexa API - make a list?
+- there are 3 endpoints to retrieve domain related data (UrlInfo, TrafficHistory, SitesLinkingIn)
+    ~ Example Payload of all available data can be found in alexa_all_available_data.json
+
+
+How much would it cost to add more info from Alexa?
+/
+
+
+What are the queries that we do on the db to get results?
+- data is directly fetched from the AWIS API and cached in a DynamoDB table
+- the '/v1/internal/business-units/enrichment/alexa?domain=' Truspilot internal Endpoint is the single point of access for Alexa data
+
+
+What data is changing from Alexa? Do we need to request for all data they provide every time? Does it make a difference?
+- constantly changing is data representing statistics e.g. traffic history and traffic data
+    ~ traffic history: range of days with data about page views, rank and views per million
+    ~ traffic data: rank, local ranks, page views, usage statistics, rank deltas, views per million, ...
+

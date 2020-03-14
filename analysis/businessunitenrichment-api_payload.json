@@ -1,0 +1,107 @@
+
+[
+  {
+    "contentData": {
+      "dataUrl": "trustpilot.com",
+      "siteData": {
+        "title": "Trustpilot",
+        "description": "Trustpilot is an open, review-driven community connecting online consumers like you, with the companies that you buy from. Make smarter, informed decisions about purchasing by sharing your reviews today"
+      }
+    },
+    "related": {
+      "dataUrl": "trustpilot.com",
+      "categories": {
+        "categoryData": {
+          "title": "Consumer Information/Consumer Opinion",
+          "absolutePath": "Top/Home/Consumer_Information/Consumer_Opinion"
+        }
+      }
+    },
+    "trafficData": {
+      "dataUrl": "trustpilot.com",
+      "rank": "2223",
+      "rankByCountry": {
+        "country": [
+          {
+            "code": "DE",
+            "rank": "3859",
+            "contribution": {
+              "pageViews": "7.29%",
+              "users": "8.01%"
+            }
+          }
+        ]
+      },
+      "usageStatistics": {
+        "usageStatistic": [
+          {
+            "timeRange": {
+              "months": "3"
+            },
+            "rank": {
+              "value": "2223",
+              "delta": "+1009"
+            },
+            "reach": {
+              "rank": {
+                "value": "2245",
+                "delta": "+975"
+              },
+              "perMillion": {
+                "value": "261",
+                "delta": "-37.39%"
+              }
+            },
+            "pageViews": {
+              "perMillion": {
+                "value": "21.3",
+                "delta": "-44.42%"
+              },
+              "rank": {
+                "value": "2713",
+                "delta": "1360"
+              },
+              "perUser": {
+                "value": "2.91",
+                "delta": "-11.28%"
+              }
+            }
+          },
+          {
+            "timeRange": {
+              "months": "1"
+            }
+          },
+          {
+            "timeRange": {
+              "days": "7"
+            }
+          },
+          {
+            "timeRange": {
+              "days": "1"
+            }
+          }
+        ]
+      },
+      "contributingSubdomains": {
+        "contributingSubdomain": [
+          {
+            "dataUrl": "trustpilot.com",
+            "timeRange": {
+              "months": "1"
+            },
+            "reach": {
+              "percentage": "30.43%"
+            },
+            "pageViews": {
+              "percentage": "30.15%",
+              "perUser": "1.83"
+            }
+          }
+        ]
+      }
+    }
+  }
+]
+

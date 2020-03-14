@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -r ./output",
     "build": "tsc",
-    "start": "npm run build && node output/index.js trustpilot.com"
+    "start": "npm run build && node output/index.js"
   },
   "author": "Stefan Sonntag",
   "license": "ISC",
